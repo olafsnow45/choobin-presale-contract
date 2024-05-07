@@ -5,13 +5,16 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-choobin = "3ZnnKeXdekaUr7KgfeLpnohRQZvsBtg4ik1sNSV2MQvF"
+choobin = "FFxxNCciqHLnE9ssJNWUGyk4qv1iS9R4kJJGq1PZ95kW"
+
+[programs.devnet]
+choobin = "FFxxNCciqHLnE9ssJNWUGyk4qv1iS9R4kJJGq1PZ95kW"
 
 [registry]
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "localnet"
+cluster = "devnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]

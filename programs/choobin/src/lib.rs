@@ -15,7 +15,7 @@ pub use contexts::*;
 
 pub mod error;
 
-declare_id!("3ZnnKeXdekaUr7KgfeLpnohRQZvsBtg4ik1sNSV2MQvF");
+declare_id!("FFxxNCciqHLnE9ssJNWUGyk4qv1iS9R4kJJGq1PZ95kW");
 
 #[program]
 pub mod choobin {
@@ -106,7 +106,7 @@ pub mod choobin {
     }    
 
     pub fn set_endtime(ctx: Context<SetEndtime>, endtimestamp: u64) -> Result<()> {
-        let now_ts = Clock::get().unwrap().unix_timestamp as u64;
+        // let now_ts = Clock::get().unwrap().unix_timestamp as u64;
 
         // require!(now_ts < endtimestamp, ErrorCode::ErrorInvalidTimestamp);
 
