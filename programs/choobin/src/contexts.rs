@@ -180,7 +180,7 @@ pub struct BuyToken<'info> {
     pub mint: Account<'info, Mint>,
 
     /// CHECK: This is not dangerous because we don't read or write from this account
-    #[account( constraint = treasury.key() == presale_info.treasury)]
+    #[account(mut, constraint = treasury.key() == presale_info.treasury)]
     pub treasury: AccountInfo<'info>,
 
     pub system_program: Program<'info, System>,
@@ -208,9 +208,10 @@ pub struct Claim<'info> {
     #[account(mut, constraint = mint.to_account_info().key() == presale_info.mint)]
     pub mint: Account<'info, Mint>,
 
-    #[account(mut,
+    #[account(init_if_needed,
         associated_token::mint = mint,
         associated_token::authority = user,
+        payer = user
     )]    
     pub user_mint_ata: Account<'info, TokenAccount>,
 

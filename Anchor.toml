@@ -11,7 +11,7 @@ choobin = "3ZnnKeXdekaUr7KgfeLpnohRQZvsBtg4ik1sNSV2MQvF"
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "Localnet"
+cluster = "localnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
